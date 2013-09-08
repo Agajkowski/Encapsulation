@@ -8,8 +8,8 @@ package lab2;
  *
  * @author alex
  */
-public abstract class Pokemon {
-    
+public class Pokemon {
+
     private String name;
     private int baseHealthPoints;
     private int attackValue;
@@ -21,5 +21,16 @@ public abstract class Pokemon {
 	this.attackValue = attackValue;
 	this.defenseValue = defenseValue;
     }
-    
+
+    public int getBaseHealthPoints() {
+	return baseHealthPoints;
+    }
+
+    public int getAttackValue() {
+	return attackValue;
+    }
+
+    public int getDefenseValue() {
+	return defenseValue;
+    }
 }
