@@ -1,5 +1,7 @@
 package lab1;
 
+import java.util.Date;
+
 /**
  * In this lab your challenge is to fix the code in both classes to use
  * proper encapsulation and the four other best practices as explained by 
@@ -10,15 +12,9 @@ package lab1;
  */
 public class Startup {
     public static void main(String[] args) {
-        Employee employee = new Employee();
-        employee.firstName = "Peter";
-        employee.lastName = "Piper";
-        employee.ssn = "333-1234";
+        Employee employee = new Employee("Peter","Piper","333-1234", new Date(1976, 22, 7), "12345");
         
-        employee.meetDepartmentStaff();
-        employee.meetWithHrForBenefitAndSalryInfo();
-        employee.reviewDeptPolicies();
-
+        employee.newEmployeeFirstDayTrainingSchedual(); //turn on or off for proof.
         System.out.println("The employee's status is: " + employee.getStatus());
     }
     
