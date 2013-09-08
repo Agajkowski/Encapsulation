@@ -20,23 +20,23 @@ import javax.swing.*;
  * @version     1.00
 */
 public class MainGUI extends javax.swing.JFrame implements ActionListener {
-    private final int MAX_RECS = 10;
+    private final int MAX_RECORDS = 10;
     private final int NOT_FOUND = -1;
 
-    String partNo;
-    int foundIndex = NOT_FOUND;
-    private String partDesc;
-    double partPrice;
+    private String partNumber;
+    private int foundIndex = NOT_FOUND;
+    private String partDescription;
+    private double partPrice;
 
-    String[] partNums = new String[10];
-    String[] partDescs = new String[10];
-    double[] partPrices = new double[10];
+    private String[] partNumbers = new String[10];
+    private String[] partDescriptions = new String[10];
+    private double[] partPrices = new double[10];
     int emptyRow;
 
     /** Creates new form MainGUI */
     public MainGUI() {
         initComponents();
-        this.txtNewProdNo.requestFocus();
+        this.textNewProductNumber.requestFocus();
     }
 
     /** This method is called from within the constructor to
@@ -49,9 +49,9 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        txtNewProdNo = new javax.swing.JTextField();
-        txtNewProdDesc = new javax.swing.JTextField();
-        txtNewProdPrice = new javax.swing.JTextField();
+        textNewProductNumber = new javax.swing.JTextField();
+        textNewProductDescription = new javax.swing.JTextField();
+        textNewProductPrice = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -75,14 +75,14 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
         setTitle("ACME Hardware Product Manager");
         setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("ACME Hardware");
 
-        txtNewProdNo.setNextFocusableComponent(txtNewProdDesc);
+        textNewProductNumber.setNextFocusableComponent(textNewProductDescription);
 
-        txtNewProdDesc.setNextFocusableComponent(txtNewProdPrice);
+        textNewProductDescription.setNextFocusableComponent(textNewProductPrice);
 
-        txtNewProdPrice.setNextFocusableComponent(txtSearchPartNo);
+        textNewProductPrice.setNextFocusableComponent(txtSearchPartNo);
 
         jLabel2.setText("Enter Product No:");
 
@@ -155,15 +155,14 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
                                         .addComponent(txtCurProdNo, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtNewProdNo, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(textNewProductNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel3)
-                                        .addComponent(txtNewProdDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(textNewProductDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel4)
-                                        .addComponent(txtNewProdPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(textNewProductPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGap(29, 29, 29)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))))
-                        .addContainerGap(68, Short.MAX_VALUE))
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -189,15 +188,15 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
                 .addGap(2, 2, 2)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtNewProdNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textNewProductNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtNewProdDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textNewProductDescription, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtNewProdPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(textNewProductPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -245,24 +244,24 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
         else if (evt.getSource() == btnDisplayList) {
             MainGUI.this.btnDisplayListActionPerformed(evt);
         }
+        else if (evt.getSource() == btnSortList) {
+            MainGUI.this.btnSortListActionPerformed(evt);
+        }
         else if (evt.getSource() == btnSearch) {
             MainGUI.this.btnSearchActionPerformed(evt);
         }
         else if (evt.getSource() == btnUpdate) {
             MainGUI.this.btnUpdateActionPerformed(evt);
         }
-        else if (evt.getSource() == btnSortList) {
-            MainGUI.this.btnSortListActionPerformed(evt);
-        }
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEnterRecordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnterRecordActionPerformed
         foundIndex = NOT_FOUND;
 
-        partNo = this.txtNewProdNo.getText();
-        partDesc = this.txtNewProdDesc.getText();
+        partNumber = this.textNewProductNumber.getText();
+        partDescription = this.textNewProductDescription.getText();
         try {
-            partPrice = Double.parseDouble(this.txtNewProdPrice.getText());
+            partPrice = Double.parseDouble(this.textNewProductPrice.getText());
         } catch(Exception e) {
             JOptionPane.showMessageDialog(this,
                     "Sorry, the price entry must be a whole or floating point number only.\n",
@@ -275,30 +274,30 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
                     "Sorry, you have reach the maximum of 10 items.\n"
                     + "No more items can be saved.", "Maximum Reached", JOptionPane.WARNING_MESSAGE);
 
-        } else if (partNo.length() == 0 || partDesc.length() == 0 
-                || this.txtNewProdPrice.getText().length() == 0)
+        } else if (partNumber.length() == 0 || partDescription.length() == 0 
+                || this.textNewProductPrice.getText().length() == 0)
         {
             JOptionPane.showMessageDialog(this, 
                     "Sorry, you must complete all fields. Please try again.",
                     "Incomplete Part Entry", JOptionPane.WARNING_MESSAGE);
-            this.txtNewProdNo.requestFocus();
+            this.textNewProductNumber.requestFocus();
 
         } else {
-            partNums[emptyRow] = partNo;
-            partDescs[emptyRow] = partDesc;
+            partNumbers[emptyRow] = partNumber;
+            partDescriptions[emptyRow] = partDescription;
             partPrices[emptyRow] = partPrice;
             this.emptyRow += 1;
         }
 
         clearEntryFields();
-        this.txtNewProdNo.requestFocus();
+        this.textNewProductNumber.requestFocus();
 }//GEN-LAST:event_btnEnterRecordActionPerformed
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         String searchNum = txtSearchPartNo.getText();
         if (searchNum != null && searchNum.length() > 0) {
-            for (int i = 0; i < this.partNums.length; i++) {
-                if (searchNum.equalsIgnoreCase(partNums[i])) {
+            for (int i = 0; i < this.partNumbers.length; i++) {
+                if (searchNum.equalsIgnoreCase(partNumbers[i])) {
                     foundIndex = i;
                     break;
                 }
@@ -308,8 +307,8 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
                     "Part Number not found. Please try again.",
                     "Not Found", JOptionPane.WARNING_MESSAGE);
            } else {
-                txtCurProdNo.setText(partNums[foundIndex]);
-                txtCurDesc.setText(partDescs[foundIndex]);
+                txtCurProdNo.setText(partNumbers[foundIndex]);
+                txtCurDesc.setText(partDescriptions[foundIndex]);
                 txtCurPrice.setText("" + partPrices[foundIndex]);
            }
         } else {
@@ -330,8 +329,8 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
                     "Part Number not found. Please try again.",
                     "Search Failure", JOptionPane.WARNING_MESSAGE);
         } else {
-            partNums[foundIndex] = txtCurProdNo.getText();
-            partDescs[foundIndex] = txtCurDesc.getText();
+            partNumbers[foundIndex] = txtCurProdNo.getText();
+            partDescriptions[foundIndex] = txtCurDesc.getText();
             partPrices[foundIndex] = Double.parseDouble(txtCurPrice.getText());
             displayList();
             JOptionPane.showMessageDialog(this,
@@ -349,8 +348,8 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
         listProducts.setText(""); // clear list
         listProducts.append("Part\tDesc\t\tPrice\n====\t====\t\t=====\n");
         for (int i = 0 ; i < emptyRow; i++) {
-            String rLine = partNums[i] + "\t"
-                    + partDescs[i] + "\t\t" + nf.format(partPrices[i]) + "\n";
+            String rLine = partNumbers[i] + "\t"
+                    + partDescriptions[i] + "\t\t" + nf.format(partPrices[i]) + "\n";
             listProducts.append(rLine);
         }
     }
@@ -368,13 +367,13 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
                     partPrices[i-1] = partPrices[i];
                     partPrices[i] = Double.parseDouble(temp);
 
-                    temp = partNums[i-1];
-                    partNums[i-1] = partNums[i];
-                    partNums[i] = temp;
+                    temp = partNumbers[i-1];
+                    partNumbers[i-1] = partNumbers[i];
+                    partNumbers[i] = temp;
 
-                    temp = partDescs[i-1];
-                    partDescs[i-1] = partDescs[i];
-                    partDescs[i] = temp;
+                    temp = partDescriptions[i-1];
+                    partDescriptions[i-1] = partDescriptions[i];
+                    partDescriptions[i] = temp;
                 }
             }
             // Once it's sorted, display in the list box
@@ -387,9 +386,9 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
     }
 
     private void clearEntryFields() {
-        txtNewProdNo.setText("");
-        txtNewProdDesc.setText("");
-        txtNewProdPrice.setText("");
+        textNewProductNumber.setText("");
+        textNewProductDescription.setText("");
+        textNewProductPrice.setText("");
     }
 
 
@@ -409,12 +408,12 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea listProducts;
+    private javax.swing.JTextField textNewProductDescription;
+    private javax.swing.JTextField textNewProductNumber;
+    private javax.swing.JTextField textNewProductPrice;
     private javax.swing.JTextField txtCurDesc;
     private javax.swing.JTextField txtCurPrice;
     private javax.swing.JTextField txtCurProdNo;
-    private javax.swing.JTextField txtNewProdDesc;
-    private javax.swing.JTextField txtNewProdNo;
-    private javax.swing.JTextField txtNewProdPrice;
     private javax.swing.JTextField txtSearchPartNo;
     // End of variables declaration//GEN-END:variables
 

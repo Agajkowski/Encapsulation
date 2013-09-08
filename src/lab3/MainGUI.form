@@ -8,6 +8,7 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -55,11 +56,11 @@
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtNewProdNo" alignment="0" min="-2" pref="94" max="-2" attributes="1"/>
+                                      <Component id="textNewProductNumber" alignment="0" min="-2" pref="94" max="-2" attributes="1"/>
                                       <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtNewProdDesc" alignment="0" min="-2" pref="177" max="-2" attributes="1"/>
+                                      <Component id="textNewProductDescription" alignment="0" min="-2" pref="177" max="-2" attributes="1"/>
                                       <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtNewProdPrice" alignment="0" min="-2" pref="97" max="-2" attributes="1"/>
+                                      <Component id="textNewProductPrice" alignment="0" min="-2" pref="97" max="-2" attributes="1"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                   <Component id="jScrollPane1" min="-2" pref="429" max="-2" attributes="0"/>
@@ -101,15 +102,15 @@
               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="txtNewProdNo" min="-2" max="-2" attributes="0"/>
+                      <Component id="textNewProductNumber" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtNewProdDesc" min="-2" max="-2" attributes="0"/>
+                      <Component id="textNewProductDescription" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtNewProdPrice" min="-2" max="-2" attributes="0"/>
+                      <Component id="textNewProductPrice" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="jScrollPane1" min="-2" pref="210" max="-2" attributes="0"/>
               </Group>
@@ -164,21 +165,21 @@
         <Property name="text" type="java.lang.String" value="ACME Hardware"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtNewProdNo">
+    <Component class="javax.swing.JTextField" name="textNewProductNumber">
       <Properties>
         <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="txtNewProdDesc"/>
+          <ComponentRef name="textNewProductDescription"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtNewProdDesc">
+    <Component class="javax.swing.JTextField" name="textNewProductDescription">
       <Properties>
         <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="txtNewProdPrice"/>
+          <ComponentRef name="textNewProductPrice"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtNewProdPrice">
+    <Component class="javax.swing.JTextField" name="textNewProductPrice">
       <Properties>
         <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
           <ComponentRef name="txtSearchPartNo"/>
